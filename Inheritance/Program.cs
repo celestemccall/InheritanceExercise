@@ -38,36 +38,39 @@ namespace Inheritance
 
             myReptile.IsColdBlooded = true;
             myReptile.HasScales = true;
-            myReptile.TypeOfMeals = "Mice";
-            myReptile.NumberOfDailyMeals = 3;
+            myReptile.Habitat = "desert";
+            myReptile.CanGrowTail = true;
 
 
             var Birdie = new Bird()
             {
 
-                OwenerName = "Yisel",
-                CagedBird = true,
-                Color = "Blue",
-                Weight = "5 lbs",
+                WingColor = "blue",
+                CanFly = true,
+                DoMigrate = true,
+                BeakLength = 2.5,
 
 
             };
 
             var myAnimals = new Animal[] { Birdie, myReptile };
 
-            foreach( var animal in myAnimals)
+            foreach(var animal in myAnimals)
             {
-                Console.WriteLine($"Number of legs: {animal.NumberOfLegs}");
-                Console.WriteLine($"Age: {animal.Age}");
-                Console.WriteLine($"Has an owner: {animal.HasAnOwner}");
-                Console.WriteLine($"Sleeps with owner: {animal.SleepsWithOwner}");
-                Console.WriteLine($"");
+                Console.WriteLine($"Alive: {animal.IsAlive}");
+                Console.WriteLine($"Age: {animal.Age} years old");
+                Console.WriteLine($"It has {animal.NumberOfLegs} legs");
+                Console.WriteLine($"It lives by {animal.LandSeaAir}");
+                Console.WriteLine($" ");
             }
 
-            Console.Write($"My mom {Birdie.OwenerName} has a bird named Birdie. It is {Birdie.CagedBird} that Birdie lives in a cage. Birdie is {Birdie.Color} and weighs {Birdie.Weight}.");
-            Console.WriteLine($"");
-            Console.WriteLine($"It is {myReptile.IsColdBlooded} that I have a cold blooded reptile. Its is {myReptile.HasScales} that he has scales. He normally eats {myReptile.TypeOfMeals} and eats {myReptile.NumberOfDailyMeals} times a day.");
+            Console.Write($"My pet bird has {Birdie.WingColor} wings. It is {Birdie.CanFly} that my birdie can fly and {Birdie.DoMigrate} that it migrates. Birdie's beak is {Birdie.BeakLength} inches long.");
+            Console.WriteLine($" ");
+            Console.WriteLine($"It is {myReptile.IsColdBlooded} that I have a cold blooded reptile. Its is {myReptile.HasScales} that he has scales. It is {myReptile.CanGrowTail} that he can grow a tail and thrives in the {myReptile.Habitat}.");
+            
 
+
+            
 
         }
 
